@@ -1,0 +1,968 @@
+/* HOJA DE ESTILOS PARA INDEX.HTML PRINCIPAL */
+/* FUENTES DE GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+/* VARIABLES GLOBAL */
+:root {
+    --brand: rgb(18, 18, 19);
+    --light: #094f94;
+    --body: #1c1535;
+    --border: rgba(53, 236, 8, 0.08);
+    --shadow: 0px 6px 30px rgb(172, 252, 255);
+    --clr-neon: #39ff14; /* Verde neón */
+    --clr-bg: #ffffff;   /* Fondo blanco  */
+}
+
+/* CONFIGURACIÓN GENERAL */
+body {
+    font-family: "Barlow", sans-serif;
+    color: var(--body);
+    line-height: 1.7;
+    background-color: var(--clr-bg); /* Asegurando que el fondo se aplique globalmente */
+}
+
+//* Ajuste para pantallas grandes */
+#titulos,
+.display-3 {
+    font-size: 15rem !important;  /* Tamaño fijo para pantallas grandes */
+}
+
+/* Ajuste para pantallas pequeñas y medianas (móviles y tabletas) */
+@media (max-width: 768px) {
+    #titulos,
+    .display-3 {
+        font-size: 10vw !important;  /* El tamaño se adapta al ancho de la pantalla */
+    }
+}
+
+
+/* TÍTULOS HIERÁRQUICOS Y DISPLAY */
+h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4 {
+    font-weight: 700;
+    color: var(--light);
+}
+
+/* Tamaños para pantallas grandes */
+.display-1 {
+    font-size: 5rem;
+}
+
+.display-2 {
+    font-size: 4rem;
+}
+
+.display-3 {
+    font-size: 3rem;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
+
+/* Para pantallas medianas (tablets y pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+    }
+    .display-2 {
+        font-size: 3rem;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Para pantallas extra pequeñas (teléfonos con ancho menor de 576px) */
+@media (max-width: 576px) {
+    .display-1 {
+        font-size: 2.5rem;
+    }
+    .display-2 {
+        font-size: 2rem;
+    }
+    .display-3 {
+        font-size: 1.75rem;
+    }
+    .display-4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* IMÁGENES */
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img {
+    width: 100%;
+}
+
+/* ENLACES */
+a {
+    color: #8eb640; /* Color del enlace */
+    transition: color 0.4s ease, transform 0.4s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--brand);
+    transform: translateY(-3px); /* Levemente eleva el enlace al hacer hover */
+}
+
+/* SECCIONES */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* TEXTOS DESTACADOS */
+.text-brand {
+    color: var(--brand) !important;
+}
+
+/* SLIDER HERO */
+.hero-slider .owl-prev,
+.hero-slider .owl-next {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: grid;
+    place-items: center;
+    color: #fff !important;
+    border-radius: 50%; /* Ajuste para que sea completamente redondeado */
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    transition: all 0.4s ease;
+    margin-top: -30px !important;
+}
+
+.hero-slider h1,
+.hero-slider .display-3 {
+    font-size: 5rem !important; /* Ajuste del tamaño de fuente */
+}
+
+/* Estilos para el índice principal */
+
+/* Ajustes generales para el slider */
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
+.hero-slider .owl-prev:hover,
+.hero-slider .owl-next:hover {
+    background-color: var(--brand) !important;
+}
+
+.owl-dot.active span {
+    background-color: var(--brand) !important;
+}
+
+/* Estilo de las imágenes sucesivas en el slider */
+.slide {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Estilos para las imágenes de fondo del slider */
+.slide1, .slide2, .slide3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Ajuste de altura y visibilidad del slider */
+.slide {
+    height: 100vh; /* Altura completa de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ajuste específico para móviles */
+@media screen and (max-width: 767px) {
+    .slide {
+        height: 60vh; /* Más pequeño en pantallas pequeñas */
+    }
+}
+
+
+.slide1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/policia7.jfif);
+}
+
+.slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/policia8.jpg);
+}
+
+.slide3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/policia6.jpg);
+}
+
+/* Estilo de los textos dentro del slider */
+.slide .display-3 {
+    text-transform: uppercase;
+    color: #5ff10a;
+}
+
+/* Navbar */
+.top-nav {
+    background-color: var(--brand);
+    color: #e9b50aec;
+    padding: 5px 0;
+}
+
+.top-nav p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.top-nav span,
+.top-nav i {
+    vertical-align: middle;
+}
+
+/* Efecto de iluminación en el menú */
+.navbar {
+    box-shadow: var(--shadow);
+}
+
+/* Iconos de redes sociales en el footer */
+.social-icons a {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    color: #fff8f8;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    background-color: #37f7fd;
+    color: var(--brand);
+}
+
+/* Estilo de enlaces en el navbar */
+.navbar .navbar-nav .nav-link {
+    color: var(--dark);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+
+/* Estilos para el logo en el navbar */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #090e09;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-brand .dot {
+    color: var(--brand);
+    color: #32e40e;
+}
+
+/* Botón genérico */
+.btn {
+    padding: 8px 26px;
+}
+
+/* Estilos para el botón de la marca */
+.btn-brand {
+    border-color: var(--brand);
+    background-color: var(--brand);
+    color: #1fd1e9;
+    font-weight: bold;
+    border: 2px solid var(--brand);
+    border-radius: 15px 50px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+}
+
+.btn-brand:hover {
+    background-color: #91d622;
+    border-color: #d64022;
+    color: #fff;
+}
+
+/* Estilos para el botón neón */
+.neon-button {
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Animación de rebote para el botón */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Efecto de reflejo debajo del botón */
+.neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+/* Efecto de brillo extendido alrededor del botón */
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+
+
+/* === Estilos para el botón en hover y focus === */
+.neon-button:hover,
+.neon-button:focus {
+    color: var(--clr-bg); /* Cambia el color del texto al color de fondo */
+    text-shadow: none; /* Remueve la sombra de texto */
+}
+
+/* === Estilos para el pseudo-elemento antes en hover y focus === */
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1; /* Hace el reflejo completamente visible */
+}
+
+/* === Estilos para el pseudo-elemento después en hover y focus === */
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1; /* Hace el brillo extendido completamente visible */
+}
+
+/* Introducción */
+.intro {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.intro p {
+    max-width: 500px;
+    margin: 0 auto; /* Centrado automático */
+}
+
+.intro p.ancho-completo {
+    max-width: 1000px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.intro h6 {
+    color: var(--brand);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.intro h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Caja de información */
+.info-box {
+    display: flex;
+    align-items: center;
+}
+
+.info-box img {
+    width: 90px;
+}
+
+/* Sección de Milestones */
+#milestone {
+    background: linear-gradient(rgba(255, 77, 41, 0.85), rgba(255, 77, 41, 0.85)), url(../img/bg_banner13.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0; /* Añadí padding para mejor espacio interior */
+}
+
+#milestone h1,
+#milestone p {
+    color: #fff;
+}
+
+/* Sección de servicios */
+.service {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 8px; /* Añadí bordes redondeados para mejorar el diseño */
+}
+
+.service h5 {
+    margin-top: 24px;
+    margin-bottom: 14px;
+}
+
+.service img {
+    width: 90px;
+}
+
+
+/* Estilos para la tarjeta de noticia */
+.noticia-card {
+    border: 1px solid #ccc; /* Borde gris claro para definir el recuadro */
+    border-radius: 5px;      /* Bordes redondeados para un aspecto más suave */
+    padding: 15px;           /* Espacio interno alrededor del contenido */
+    margin-bottom: 20px;     /* Espacio debajo de cada tarjeta */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    width: 400px;            /* Ancho de la tarjeta (ajustable) */
+    box-sizing: border-box;  /* Incluye padding y borde en el ancho */
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.noticia-card img {
+    max-width: 100%;         /* Asegura que la imagen no se desborde */
+    height: auto;
+    margin-bottom: 10px;     /* Espacio debajo de la imagen */
+    border-radius: 5px;      /* Bordes redondeados para la imagen */
+}
+
+.noticia-card h3 {
+    margin-top: 0;           /* Elimina el margen superior predeterminado */
+    margin-bottom: 10px;     /* Espacio debajo del título */
+    font-size: 1.5em;        /* Tamaño de fuente más grande para el título */
+    color: var(--brand);     /* Usando la variable de color principal */
+}
+
+.noticia-card p {
+    margin-bottom: 15px;     /* Espacio debajo del párrafo */
+    font-size: 1.1em;        /* Tamaño de fuente ligeramente mayor */
+    color: #333;             /* Color de texto más oscuro para mejor legibilidad */
+}
+
+.noticia-card a {
+    display: inline-block;    /* Para aplicar padding y márgenes */
+    padding: 8px 15px;
+    background-color: #007bff; /* Azul para el enlace */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.noticia-card a:hover {
+    background-color: #0056b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Estilos para la caja de tarjeta con efecto 3D */
+.cardBox {
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;  /* Espacio alrededor de cada tarjeta */
+    perspective: 800px; /* Necesario para el efecto 3D */
+    transition: all 0.3s ease; /* Transición suave al interactuar */
+    width: 23.7%;        /* Ancho ajustado para las tarjetas */
+}
+
+.cardBox:hover .card {
+    transform: rotateY(180deg);  /* Efecto de rotación 3D al pasar el ratón */
+}
+
+.card {
+    background: url("../img/tu-imagen.jpg") no-repeat center center;  /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;  /* Suaviza la transición del giro */
+    width: 100%;
+    border-radius: 8px; /* Bordes redondeados para la tarjeta */
+    position: relative; /* Posición relativa para controlar el contenido */
+    background-color: #222; /* Color de fondo por si la imagen no carga */
+}
+
+/* Animación de giro */
+@keyframes giro {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Clase común para todos los elementos con fondo de imagen */
+.bg-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+}
+
+/* Establecer las imágenes de fondo específicas para cada id */
+#rcn {
+    background-image: url("../img/RCN.png");
+}
+
+#caracol {
+    background-image: url("../img/caracol.png");
+}
+
+#infobae {
+    background-image: url("../img/infobae.png");
+}
+
+#colombiano {
+    background-image: url("../img/colombiano.png");
+}
+
+#eltiempo {
+    background-image: url("../img/eltiempo.png");
+}
+
+#facebook {
+    background-image: url("../img/facebook.png");
+}
+
+#ns {
+    background-image: url("../img/ns.png");
+}
+
+#eltabloide {
+    background-image: url("../img/eltabloide.png");
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/*video introductorio*/
+/* Estilo para el video */
+video#intro-video {
+    position: fixed;   /* Fija el video para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;       /* Hace que el video ocupe el 100% del ancho de la pantalla */
+    height: 100%;      /* Hace que el video ocupe el 100% del alto de la pantalla */
+    object-fit: cover; /* Hace que el video cubra toda la pantalla sin distorsionarse */
+    z-index: 9999;     /* Asegura que el video se muestre sobre el contenido */
+}
+
+/* El contenido principal se oculta mientras el video está activo */
+#main-content {
+    display: none;
+}
+
+
+
+/* ====== Pantallas móviles grandes (hasta 768px) ====== */
+
+/* MODIFICADO: Layout de 2 columnas para cards usando Flexbox */
+@media screen and (max-width: 767px) {
+    /* Dispositivos móviles grandes */
+      img[src="img/corazon.jfif"] {
+        display: none;  /* Oculta la imagen completamente */
+        }
+    .container {
+        max-width: 100%;
+    }
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* Ajuste de tamaño de texto */
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.8rem;
+    }
+
+    /* Imágenes dentro de contenedores ajustados */
+    .slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* >>> COMIENZO MODIFICACIONES PARA CARDS (2 COLUMNAS) <<< */
+    /* Estilos para el CONTENEDOR de las cards (.boxesContainer) */
+    .boxesContainer {
+        display: flex; /* Activa Flexbox */
+        flex-wrap: wrap; /* Permite que las cards salten de línea */
+        justify-content: space-between; /* Distribuye las cards y el espacio entre ellas */
+        padding: 0 10px; /* Añade un poco de espacio a los lados del contenedor */
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+        float: none; /* Asegura que no haya float interfiriendo de reglas anteriores */
+        margin-left: auto; /* Centra el contenedor si tiene un max-width */
+        margin-right: auto; /* Centra el contenedor si tiene un max-width */
+        width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+    }
+
+    /* Estilos para CADA CARD (.cardBox) dentro del contenedor */
+    .cardBox {
+        /* Elimina float, ya no es necesario con Flexbox */
+        float: none;
+
+        /* Calcula el ancho para que quepan 2 cards por fila menos el espacio entre ellas */
+        width: calc(50% - 15px); /* 50% menos 15px (ej: 7.5px de margen a cada lado) */
+
+        /* Añade margen para separar las cards vertical y horizontalmente */
+        margin: 10px 7.5px; /* 10px arriba/abajo, 7.5px izquierda/derecha */
+
+        /* Asegura box-sizing para que el margen y padding no afecten el ancho */
+        box-sizing: border-box;
+    }
+
+    /* La regla para .card (la interna) */
+    .card {
+        height: 285px; /* Mantén la altura existente para esta media query */
+        width: 100%; /* Asegura que la card interna llene su contenedor .cardBox */
+        box-sizing: border-box;
+    }
+
+    /* >>> FIN MODIFICACIONES CARDS <<< */
+}
+
+
+    .noticia-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Asegurar que el texto no se desborde */
+    .intro p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Asegurar que los formularios se adapten */
+    form {
+        width: 100%;
+        padding: 16px;
+        margin: auto;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        width: 100%;
+        padding: 8px;
+    }
+
+    /* >>> ESTILOS PARA EL FOOTER - ASEGURAR ANCHO COMPLETO <<< */
+   
+    footer {
+    width: 100%;
+    background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9)), url(../img/bg_banner13.jpg), #082032;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #ffffff; /* Aseguramos que el texto del footer sea blanco */
+}
+
+    
+  /* >>> MODIFICACIONES PARA HACER EL FORMULARIO RESPONSIVE EN PANTALLAS PEQUEÑAS <<< */
+@media screen and (max-width: 767px) {
+    /* Eliminar desbordamiento horizontal */
+    body, html {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ajustes generales para formularios y elementos */
+    form, form label, form input[type="text"], form input[type="email"], form select, form textarea {
+        width: 100%;
+        padding: 8px 10px;
+        margin: 5px 0;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    /* Reglas para form */
+    form {
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    /* Reglas para los inputs y selects */
+    form input[type="text"], form input[type="email"], form select, form .form-control, form textarea {
+        width: 100% !important;
+    }
+
+    /* Reglas para el área de texto */
+    form textarea {
+        height: auto;
+    }
+
+    /* Para los botones si es necesario */
+    form button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Para iframes */
+    iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Asegurar footer 100% de ancho */
+    footer {
+        width: 100%;
+    }
+
+    /* Reglas generales para otros elementos */
+    .boxesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .cardBox {
+        width: 95%; /* Usar el 95% de la pantalla */
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
+}
+
+/* >>> AÑADE ESTAS REGLAS PARA HACER VIDEOS EMBEBIDOS RESPONSIVOS <<< */
+@media screen and (max-width: 480px) {
+    .boxesContainer {
+        justify-content: center; 
+    }
+
+    /* Estilos para las cards */
+    .cardBox {
+        width: 95%; /* Usar el 95% de la pantalla */
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    /* Formularios más amigables */
+    form input[type="text"], form input[type="email"] {
+        width: 100%;
+        padding: 6px 10px;
+    }
+}
+
+/* ====== Pantallas muy pequeñas (hasta 320px) ====== */
+@media screen and (max-width: 320px) {
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 18px;
+    }
+
+    .neon-button {
+        font-size: 1.5rem;
+    }
+}
+
+/* >>> Asegurar que el body tenga overflow-x: hidden; en todas las pantallas pequeñas >>> */
+@media screen and (min-width: 320px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* ====== Pantallas grandes ====== */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ====== Tablet landscape y más grandes ====== */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* ====== Tablet portrait y más pequeñas ====== */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

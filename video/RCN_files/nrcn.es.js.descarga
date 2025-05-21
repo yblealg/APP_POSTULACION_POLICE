@@ -1,0 +1,9 @@
+import { L as e } from "./segment-WidozQaO.js";
+try {
+  window.lrSegment = new e(
+    "zEdDVqmQgs2fjSAhVCSTIN79bYjsRapg",
+    null,
+    !0
+  );
+} catch {
+}

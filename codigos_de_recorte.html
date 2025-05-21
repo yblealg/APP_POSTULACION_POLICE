@@ -1,0 +1,39 @@
+ <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="padding: 20px; position: relative;">
+                <!-- Botón de cerrar en la esquina superior derecha -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" 
+                        style="position: absolute; top: 10px; right: 10px; z-index: 1050;"></button>
+
+                <div class="modal-body">
+                    <!-- Video dentro del modal con márgenes de 20px alrededor -->
+                    <video id="intro-video" autoplay playsinline controls style="width: calc(100% - 40px); height: calc(100% - 40px); margin: 20px;">
+                        <source src="video/director.mp4" type="video/mp4">
+                        Tu navegador no soporta este formato de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para manejar el modal y video -->
+    <script type="text/javascript">
+        // Función para abrir el modal automáticamente al cargar la página
+        window.addEventListener('load', () => {
+            var myModal = new bootstrap.Modal(document.getElementById('videoModal'));
+            myModal.show();  // Abre el modal automáticamente
+
+            const video = document.getElementById('intro-video');
+            
+            // Reproducir el video de forma automática al abrir el modal
+            video.play();  // Aseguramos que se inicie la reproducción al cargar el modal
+
+            // Pausar el video y reiniciarlo cuando se cierre el modal
+            const modal = document.getElementById('videoModal');
+            modal.addEventListener('hidden.bs.modal', () => {
+                video.pause(); // Pausar el video cuando se cierra el modal
+                video.currentTime = 0; // Reiniciar el video al inicio
+            });
+        });
+    </script>
