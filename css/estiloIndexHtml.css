@@ -35,11 +35,6 @@ body {
     }
 }
 
-.col-lg-5 {
-  display: flex;
-  flex-direction: column;  /* Para que los elementos se apilen verticalmente */
-  align-items: center;     /* Esto centra todos los hijos horizontalmente */
-}
 
 /* TÍTULOS HIERÁRQUICOS Y DISPLAY */
 h2, h3, h4, h5, h6,
